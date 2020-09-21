@@ -12,41 +12,6 @@ from flask import Flask, request, jsonify
 import numpy as np
 import pickle
 
-from firebase import firebase
-
-import pyrebase
-
-config = {
-  "apiKey": "",
-  "authDomain": "",
-  "databaseURL": "",
-  "storageBucket": ""
-}
-
-
-firebase = pyrebase.initialize_app(config)
-userEmail = ''
-userPass = ''
-
-auth = firebase.auth()
-
-# Log the user in
-user = auth.sign_in_with_email_and_password(userEmail, userPass)
-
-# Get a reference to the database service
-db = firebase.database()
-
-# data to save
-data = {
-            "name": "Mortimer Williams"
-            }
-
-# Pass the user's idToken to the push method
-results = db.child("test").push(data, user['idToken'])
-print results
-results = db.child("test").get(user['idToken'])
-print results.val()
-
 
 
 # Define app and api object
