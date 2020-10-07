@@ -4,3 +4,10 @@
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 AWS_Deployment/flask/application.py
+/final-project/Ecommerce_Customers.csv
+final-project/Ecommerce_Customers.csv
+
+
+
+
+
